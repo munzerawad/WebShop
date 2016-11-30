@@ -1,0 +1,24 @@
+﻿<div class="container">
+    
+    <div class="row">
+        <div class="col-md-8">
+            <table class="table table-bordered" ng-controller="ShopUsersListCtrl">
+                <tr>
+                    <th ng-click="SelectOrderBy('FullName')" class="btn-link">
+                        FullName
+                    </th>
+                    <th ng-click="selectOrderBy('Email')" class="btn-link">
+                        Email
+                    </th>
+                </tr>
+                <tr ng-repeat="user in usersList | orderBy:selectedOrder">
+                    <td>{{user.FullName}}</td>
+                    <td>{{user.Email}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-4">
+            @Html.Partial("_CreateShopUserPartialView");
+        </div>
+    </div>
+</div>

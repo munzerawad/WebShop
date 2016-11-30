@@ -1,0 +1,42 @@
+﻿
+@using Microsoft.AspNet.Identity
+
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "LogOutForm" }))
+    {
+
+        <ul class="nav navbar-nav navbar-right">
+
+            <li>
+                @Html.ActionLink("Hello.. " + User.Identity.GetUserName(), "Index", "Home", new { }, new { })
+            </li>
+            <li>
+                @Html.ActionLink("People", "Index", "People", new { }, new { })
+            </li>
+            @if (User.IsInRole("Admin"))
+            {
+                <li>
+                    @Html.ActionLink("Cities", "Index", "Cities", new { }, new { })
+                </li>
+                <li>
+                    @Html.ActionLink("Countries", "Index", "Cities", new { }, new { })
+                </li>
+            }
+            <li>
+                <a href="javascript:document.getElementById('LogOutForm').submit()">LogOff</a>
+            </li>
+        </ul>
+    }
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            @Html.ActionLink("LogIn", "LogIn", "Account", new { }, new { })
+        </li>
+        <li>
+            @Html.ActionLink("Register", "Register", "Account", new { }, new { })
+        </li>
+    </ul>
+}

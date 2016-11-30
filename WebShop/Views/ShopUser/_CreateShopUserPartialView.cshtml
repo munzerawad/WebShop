@@ -1,0 +1,35 @@
+﻿
+
+<div class="container" ng-controller="CreateShopUsersCtrl">
+    
+    <form name="newUserForm" class="form-inline" novalidate>
+        <label class="control-label">
+            FirstName:
+            <input type="text" name="firstName" ng-model="newUser.FirstName" class="form-control" required/>
+            <span ng-show="newUserForm.FirstName.$touched && newUserForm.FirstName.$invalid">The name is required.</span>
+        </label>
+        <label class="control-label">
+            LastName:
+            <input type="text" ng-model="newUser.LastName"  class="form-control" required/>
+        </label>
+        <label class="control-label">
+            UserName:
+            <input type="text" ng-model="newUser.UserName" class="form-control" required/>
+        </label>
+        <label class="control-label">
+            Password:
+            <input type="password" ng-model="newUser.Password" class="form-control" required/>
+        </label>
+        <label class="control-label">
+            Email:
+            <input type="email" ng-model="newUser.Email" class="form-control" required/>
+        </label>
+        
+            <input type="button" value="Upload Picture" onclick="$('#upLoadNewUserPic').click()" class="btn btn-success"/>
+            <input name="newUserPhoto" id="upLoadNewUserPic" type="file" ng-hide="true" 
+                   ng-model="userPhoto" value="Uplaod Pic" file-model="userPhoto" />
+        <br />
+        <input type="button" class="btn btn-success" value="Save" ng-click="CreateUser(newUser)"/>
+    </form>
+
+</div>
