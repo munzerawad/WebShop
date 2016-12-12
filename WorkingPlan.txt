@@ -1,4 +1,6 @@
 
+
+
 (First Week ) : Working on Building Models ,DataBase , Repository and implemeting Identity(Building basic classes)
 
 (Second Week) : Working on Interfaces for managing Users(Add,Delete Edit) , Product(Add ,Delete ,Edit) and Category(Add,Delete ,Edit).
@@ -8,4 +10,6 @@
 (Fourth Week) : working on uploading Image, Working on Printing Report for the customer, Redoing some interfaces using Asp.net.
 
 (Fifth Week) :Working on implementing antiForignToken With Angular , Doing SomeBootstrap and Css . 
-(Sexth Week) : Working on data validation in client side and server side.
+
+
+(Sixth Week) : Working on data validation in client side and server side.
